@@ -1,0 +1,5 @@
+<h1>WORLD FAMOUS TRAINERS</h1>
+
+<% @trainers.each do |trainer| %>
+<h2><a href="/trainers/<%= trainer.id %>"><%= trainer.name %></a></h2>
+  <% end %>
