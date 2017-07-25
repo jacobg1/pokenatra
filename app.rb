@@ -18,7 +18,10 @@ get '/pokemon/new' do
 end
 
 #add new pokemon (post)
-
+post '/pokemon' do
+  @pokemon = Pokemon.create!(params[:pokemon])
+  redirect "/pokemon/#{@pokemon.id}"
+end
 
 #pokemon show page
 get '/pokemon/:id' do
