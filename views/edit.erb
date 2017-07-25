@@ -1,0 +1,17 @@
+<h2>Edit Pokemon Stats</h2>
+
+<form class="edit_pokemon" action="/pokemon/<%= @pokemon.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <label>Name:</label>
+    <input name="pokemon[name]">
+
+  <label>Type:</label>
+  <input name="pokemon[poke_type]">
+
+  <label>CP:</label>
+  <input name="pokemon[cp]">
+
+  <input type="submit" value="EDIT">
+
+</form>

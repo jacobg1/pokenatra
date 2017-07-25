@@ -28,3 +28,16 @@ get '/pokemon/:id' do
   @pokemon = Pokemon.find(params[:id])
   erb :show
 end
+
+#edit page
+get '/pokemon/:id/edit' do
+  @pokemon = Pokemon.find(params[:id])
+  erb :edit
+end
+
+#update info
+put '/pokemon/:id' do
+  @pokemon = Pokemon.find(params[:id])
+  @pokemon.update(params[:pokemon])
+  redirect "/pokemon/#{@pokemon.id}"
+end
