@@ -1,0 +1,15 @@
+<div class="teams">
+
+    <h3>Name: <%= @teams.name %></h3>
+    <h3>Id: <%= @teams.id%></h3>
+
+    <a href="/teams/<%= @teams.id %>/edit">Edit teams</a>
+
+
+  <h4>Trainers:</h4>
+  <% @teams.trainers.each do |team| %>
+    <p><%= team.name %><p>
+  <% end %>
+</div>
+
+<h3><a href="/">HOME</a></h3>
