@@ -64,9 +64,39 @@ get '/trainers' do
   erb :trainers_index
 end
 
+#add trainer
+get '/trainers/new' do
+  erb :trainers_new
+end
+
+#update page with new trainer
+post '/trainers' do
+  @trainers = Trainer.create!(params[:trainers])
+  redirect "trainers/#{@trainers.id}"
+end
 
 #trainers show page
 get '/trainers/:id' do
   @trainers = Trainer.find(params[:id])
   erb :trainers_show
+end
+
+#edit trainer
+get '/trainers/:id/edit' do
+  @trainers = Trainer.find(params[:id])
+  erb :trainers_edit
+end
+
+#update edit info
+put '/trainers/:id' do
+  @trainers = Trainer.find(params[:id])
+  @trainers.update(params[:trainers])
+  redirect "/trainers/#{@trainers.id}"
+end
+
+#delete trainer
+delete '/trainers/:id' do
+  @trainers = Trainer.find(params[:id])
+  @trainers.destroy
+  redirect '/trainers'
 end

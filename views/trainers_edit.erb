@@ -1,0 +1,22 @@
+<form class="edit_trainer" action="/trainers/<%= @trainers.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <label>Name:</label>
+    <input name="trainers[name]">
+
+
+  <label>Photo-url:</label>
+  <input name="trainers[photo_url]">
+
+
+
+  <input type="submit" value="EDIT">
+</form>
+
+
+<form class="delete" action="/trainers/<%= @trainers.id%>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input class="button.delete" type="submit" value="Delete!">
+</form>
+
+<h3><a href="/">HOME</a></h3>

@@ -16,5 +16,5 @@ Pokemon.create(name: "Nidoking", cp: rand(800), poke_type: "poison ground", img_
 Pokemon.create(name: "Gengar", cp: rand(800), poke_type: "ghost poison", img_url: "https://img.pokemondb.net/artwork/gengar.jpg", trainer_id: 1)
 Pokemon.create(name: "Blastoise", cp: rand(800), poke_type: "water", img_url: "https://img.pokemondb.net/artwork/blastoise.jpg", trainer_id: 2)
 
-Trainer.create(name: "Ash Catchum", photo_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwio3Ybrs6XVAhVLcz4KHZKUAO8QjRwIBw&url=http%3A%2F%2Fsonicpokemon.wikia.com%2Fwiki%2FAsh_Ketchum&psig=AFQjCNHvUkjb7UUB1aRqk4IIv2jWo0V-_g&ust=1501105481694685")
+Trainer.create(name: "Ash Catchum", photo_url: "https://img.pokemondb.net/artwork/gengar.jpg")
 Trainer.create(name: "Jake", photo_url: "https://img.pokemondb.net/artwork/blastoise.jpg")

@@ -2,6 +2,10 @@
 <div class="trainers">
 
     <h3>Name: <%= @trainers.name %></h3>
+    <h3>Id: <%= @trainers.id%></h3>
+
+    <a href="/trainers/<%= @trainers.id %>/edit">Edit trainer</a>
+
 
   <img src="<%= @trainers.photo_url %>"></img>
   <h4>Pokemon:</h4>
@@ -9,3 +13,5 @@
     <p><%= pokemon.name %><p>
   <% end %>
 </div>
+
+<h3><a href="/">HOME</a></h3>
