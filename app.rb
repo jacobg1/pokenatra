@@ -6,6 +6,8 @@ require_relative 'db/connection'
 
 require_relative 'models/pokemon'
 require_relative 'models/trainer'
+require_relative 'models/team'
+
 
 #home page
 get '/' do
@@ -100,4 +102,16 @@ delete '/trainers/:id' do
   @trainers = Trainer.find(params[:id])
   @trainers.destroy
   redirect '/trainers'
+end
+
+#*******************TEAMS******************TEAMS****************************************
+
+get '/teams' do
+  @teams = Team.all
+  erb :team_index
+end
+
+get '/teams/:id' do
+  @teams = Team.find(params[:id])
+  erb :team_show
 end

@@ -7,9 +7,10 @@
 
 
   <img src="<%= @trainers.photo_url %>"></img>
+
   <h4>Pokemon:</h4>
   <% @trainers.pokemons.each do |pokemon| %>
-    <p><%= pokemon.name %><p>
+    <p><a href="/pokemon/<%= pokemon.id %>"><%= pokemon.name %></a><p>
   <% end %>
 </div>
 
