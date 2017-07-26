@@ -15,7 +15,11 @@
   <input name="pokemon[img_url]">
 
   <label>Trainer-Id:</label>
-  <input name="pokemon[trainer_id]">
+  <select name="pokemon[trainer_id]">
+    <% @trainers.each do |train| %>
+    <option value="<%= train.id %>"><%= train.name %></option>
+    <% end %>
+  </select>
 
   <input type="submit" value="Create">
 

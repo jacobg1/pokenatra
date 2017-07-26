@@ -3,14 +3,20 @@
   <form class="add_trainer" action="/trainers" method="post">
 
     <label>Name:</label>
-      <input name="trainers[name]">
+      <input name="trainers[name]" value="Name">
 
     <label>Photo:</label>
-    <input name="trainers[photo_url]">
+    <input name="trainers[photo_url]" value="photo-url">
+
+    <label>Team-Id:</label>
+    <select name="trainers[team_id]">
+      <% @teams.each do |team| %>
+      <option value="<%= team.id %>"><%= team.name %></option>
+      <% end %>
+    </select>
 
     <input type="submit" value="Create">
 
   </form>
-
 
   <h3><a href="/">HOME</a></h3>

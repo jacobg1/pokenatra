@@ -23,6 +23,7 @@ end
 
 #add new pokemon page (get)
 get '/pokemon/new' do
+  @trainers = Trainer.all
   erb :new
 end
 
@@ -69,6 +70,7 @@ end
 
 #add trainer
 get '/trainers/new' do
+  @teams = Team.all
   erb :trainers_new
 end
 
@@ -87,6 +89,7 @@ end
 #edit trainer
 get '/trainers/:id/edit' do
   @trainers = Trainer.find(params[:id])
+  @teams = Team.all
   erb :trainers_edit
 end
 
@@ -106,12 +109,45 @@ end
 
 #*******************TEAMS******************TEAMS****************************************
 
+#team index
 get '/teams' do
   @teams = Team.all
   erb :team_index
 end
 
+#team new page
+get '/teams/new' do
+  erb :team_new
+end
+
+#team new post page
+post '/teams' do
+  @teams = Team.create!(params[:teams])
+  redirect "/teams/#{@teams.id}"
+end
+
+#team show page
 get '/teams/:id' do
   @teams = Team.find(params[:id])
   erb :team_show
+end
+
+#team edit page
+get '/teams/:id/edit' do
+  @teams = Team.find(params[:id])
+  erb :team_edit
+end
+
+#update edit info
+put '/teams/:id' do
+  @teams = Team.find(params[:id])
+  @teams.update(params[:teams])
+  redirect "/teams/#{@teams.id}"
+end
+
+#delete team
+delete '/teams/:id' do
+  @teams = Team.find(params[:id])
+  @teams.destroy
+  redirect '/teams'
 end

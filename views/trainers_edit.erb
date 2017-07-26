@@ -8,6 +8,13 @@
   <label>Photo-url:</label>
   <input name="trainers[photo_url]">
 
+  <label>Team-Id:</label>
+  <select name="trainers[team_id]">
+    <% @teams.each do |team| %>
+    <option value="<%= team.id %>"><%= team.name %></option>
+    <% end %>
+  </select>
+
 
 
   <input type="submit" value="EDIT">
