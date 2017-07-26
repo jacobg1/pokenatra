@@ -39,6 +39,7 @@ end
 #edit page
 get '/pokemon/:id/edit' do
   @pokemon = Pokemon.find(params[:id])
+  @trainers = Trainer.all
   erb :edit
 end
 

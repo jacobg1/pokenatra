@@ -18,3 +18,6 @@ Pokemon.create(name: "Blastoise", cp: rand(800), poke_type: "water", img_url: "h
 
 Trainer.create(name: "Ash Catchum", photo_url: "https://img.pokemondb.net/artwork/gengar.jpg")
 Trainer.create(name: "Jake", photo_url: "https://img.pokemondb.net/artwork/blastoise.jpg")
+Trainer.create(name: "Randal", photo_url: "https://img.pokemondb.net/artwork/blastoise.jpg")
+Trainer.create(name: "Lil T", photo_url: "https://img.pokemondb.net/artwork/blastoise.jpg")
+Trainer.create(name: "Space", photo_url: "https://img.pokemondb.net/artwork/blastoise.jpg")
